@@ -3,7 +3,8 @@ lock "~> 3.14.1"
 
 set :application, "myapp"
 set :repo_url, "git@github.com:Volovenko/favorite-places-hufflepuff.git"
-set :linked_files, %w{config/master.key}
+append :linked_files, "config/master.key"
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

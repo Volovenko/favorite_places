@@ -3,7 +3,10 @@ lock "~> 3.14.1"
 
 set :application, "myapp"
 set :repo_url, "git@github.com:Volovenko/favorite-places-hufflepuff.git"
-append :linked_files, "config/master.key"
+set :default_env, {
+  "RAILS_ENV" => "production",
+  "RAILS_MASTER_KEY" => ENV["RAILS_MASTER_KEY"]
+}
 
 
 # Default branch is :master

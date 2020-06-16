@@ -5,7 +5,7 @@ set :application, "myapp"
 set :repo_url, "git@github.com:Volovenko/favorite-places-hufflepuff.git"
 set :default_env, {
   "RAILS_ENV" => "production",
-  "RAILS_MASTER_KEY" => ENV["RAILS_MASTER_KEY"]
+  "RAILS_MASTER_KEY" => ENV["MASTER_KEY"]
 }
 
 

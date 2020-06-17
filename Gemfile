@@ -27,7 +27,6 @@ gem 'fog-aws'
 gem 'font_awesome5_rails'
 gem "pdfkit"
 gem "wkhtmltopdf-binary"
-gem 'dotenv-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -3,10 +3,7 @@ lock "~> 3.14.1"
 
 set :application, "myapp"
 set :repo_url, "git@github.com:Volovenko/favorite-places-hufflepuff.git"
-
-set :deploy_to, '/var/www/myapp'
-
-append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
+set :linked_files, %w{config/master.key}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

@@ -39,4 +39,3 @@ yarn-debug.log*
 /public/user.pdf
 /public/uploads/*
 /config/initializers/app_env_vars.rb
-.env

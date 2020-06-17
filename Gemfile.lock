@@ -369,7 +369,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
-  dotenv-rails
   factory_bot_rails
   faker (= 2.1.2)
   fog-aws

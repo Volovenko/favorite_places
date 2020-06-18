@@ -2,7 +2,6 @@
 lock "~> 3.14.1"
 
 set :application, "my-places.site"
-<<<<<<< HEAD
 set :repo_url, "git@github.com:Volovenko/favorite-places-hufflepuff.git"
 set :deploy_to, "/home/deploy/#{fetch :application}"
 

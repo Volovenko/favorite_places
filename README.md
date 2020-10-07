@@ -1,7 +1,5 @@
 # Favorite-Places App
 
-## General info [my-places.site](https://my-places.site)
-
 Favorite-Places is a Ruby-based social application for sharing with friends your beloved places. It allowes to set marks on Google maps with your photos and get likes on them. A user can see his own map with places he created, maps of other users and also a map with his favorite places on it. As an admin you can download a generated PDF file with statistics about users activity at the application.
 
 ## Screenshots

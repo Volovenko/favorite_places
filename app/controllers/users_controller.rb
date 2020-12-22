@@ -15,14 +15,15 @@ class UsersController < ApplicationController
   def show; end
 
   def users
-    @fav_places = FavPlace.all
-    @hash = @fav_places.group(:likeable_id).count.sort_by { |_k, v| v }.reverse
-    @place_id = @hash.map { |a| a[0] }
-    @top_users_id = @place_id.map do |n|
-      @place = Place.find(n)
-      @author_id = @place.author_id
+    @fav_places = FavPlace.all.includes(place: :author)
+    @fav_places_with_author = @fav_places.map do |fav_place|
+      fav_place.attributes.merge(
+        'place': fav_place.place
+        'author': fav_place.place.author
+      )
     end
-    @top10_users_id = @top_users_id.uniq[0..10]
+    @places_raiting = @fav_places_with_author.group(:likeable_id).count.sort_by { |_k, v| v }.reverse
+    @top10_users = @places_raiting.uniq { |place| place.author }[0..10].map(&:author)
     User.where(id: @top10_users_id)
   end
 

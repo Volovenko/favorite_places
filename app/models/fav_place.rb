@@ -2,6 +2,7 @@
 
 class FavPlace < ApplicationRecord
   belongs_to :likeable, polymorphic: true
+  counter_culture :category
   belongs_to :user, class_name: 'User'
   validates :user_id, presence: true
   validates :likeable_id, presence: true
